@@ -1,0 +1,102 @@
+body{
+    background-color: rgb(138, 192, 192);
+    text-align:center;
+    margin:30px;
+    padding:15px;
+}
+button{
+    color: rgb(12, 1, 1);
+    border-radius: 30px;
+}
+button:hover{
+    background-color: red;
+}
+.navbar{
+    width:100%;
+    background:blue;
+    padding:15px 0;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    gap:30px;
+}
+
+.navbar a{
+    color:white;
+    text-decoration:none;
+    font-size:18px;
+
+    display:inline-block;
+    padding:10px 15px;
+}
+
+.navbar a:hover{
+    background:green;
+    border-radius:5px;
+}
+/* =========================
+   PHYSICS PAGE
+========================= */
+
+.subtitle{
+    text-align:center;
+    font-size:22px;
+    font-weight:bold;
+    margin-bottom:35px;
+}
+
+
+/* Physics Buttons */
+
+.physics-list{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:20px;
+}
+
+
+.physics-list button{
+    width:300px;
+    height:60px;
+
+    background:#04a9f4;
+    color:white;
+
+    border:2px solid #222;
+    border-radius:5px;
+
+    font-size:18px;
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+
+.physics-list button:hover{
+    background:green;
+    transform:scale(1.05);
+}
+
+
+/* Mobile */
+
+@media screen and (max-width:768px){
+
+    .physics-list button{
+        width:85%;
+        max-width:300px;
+        height:55px;
+        font-size:16px;
+    }
+
+    .navbar{
+        flex-wrap:wrap;
+        gap:5px;
+    }
+
+}
