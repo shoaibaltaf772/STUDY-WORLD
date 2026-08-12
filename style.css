@@ -88,8 +88,8 @@ button:hover{
 @media screen and (max-width:768px){
 
     .physics-list button{
-        width:85%;
-        max-width:300px;
+        width:90%;
+        max-width:400px;
         height:55px;
         font-size:16px;
     }
