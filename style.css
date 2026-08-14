@@ -5,15 +5,17 @@ body{
     padding:15px;
 }
 button{
+    background-color: red;
     color: rgb(12, 1, 1);
-    border-radius: 10px;
+    border-radius: 30px;
+    font-size: large;
 }
 button:hover{
-    background-color: red;
+    background-color: rgb(255, 254, 254);
 }
 .navbar{
     width:100%;
-    background:red;
+    background:blue;
     padding:15px 0;
 
     display:flex;
@@ -24,7 +26,7 @@ button:hover{
 }
 
 .navbar a{
-    color:white;
+    color:rgb(243, 242, 242);
     text-decoration:none;
     font-size:18px;
 
@@ -88,10 +90,10 @@ button:hover{
 @media screen and (max-width:768px){
 
     .physics-list button{
-        width:95%;
-        max-width:400px;
-        height:60px;
-        font-size:18px;
+        width:85%;
+        max-width:300px;
+        height:55px;
+        font-size:16px;
     }
 
     .navbar{
