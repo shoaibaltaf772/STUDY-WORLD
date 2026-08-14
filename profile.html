@@ -39,25 +39,81 @@
 
         <h1>👤 My Profile</h1>
 
-        <h2>📚 Class 9 Student</h2>
+       <input type="text" placeholder="Enter your name" id="nameInput"><br><br>
 
-        <p><strong>Name:</strong> Shoaib</p>
+       <input type="text" placeholder="Enter your class" id="classInput"><br><br>
 
-        <p><strong>Class:</strong> 9th</p>
+       <input type="text"placeholder="Enter your school" id="schoolInput"><br><br>
 
-        <p><strong>Website:</strong> Class 9 Notes</p>
+       Save your profile information by clicking the button below:<br><br>
 
-        <p><strong>Subjects:</strong> English, Urdu, Mathematics, Physics, Chemistry, Computer</p>
+       <button onclick="saveProfile()">Save profile</button><br><br>
 
-        <br>
+       <button onclick="removeProfile()">🗑️ Remove Profile</button><br><br>
 
         <a href="index.html">
-            <button>⬅ Back profile</button>
+            <button>⬅ Back to Notes</button>
         </a>
 
         <br><br>
 
+
+
     </div>
+
+     <script>
+
+window.onload = function () {
+
+    document.getElementById("nameInput").value =
+        localStorage.getItem("profileName") || "";
+
+    document.getElementById("classInput").value =
+        localStorage.getItem("profileClass") || "";
+
+    document.getElementById("schoolInput").value =
+        localStorage.getItem("profileSchool") || "";
+
+};
+
+
+function saveProfile() {
+
+    localStorage.setItem(
+        "profileName",
+        document.getElementById("nameInput").value
+    );
+
+    localStorage.setItem(
+        "profileClass",
+        document.getElementById("classInput").value
+    );
+
+    localStorage.setItem(
+        "profileSchool",
+        document.getElementById("schoolInput").value
+    );
+
+    alert("✅ Profile Saved!");
+}
+
+
+function removeProfile() {
+
+    localStorage.removeItem("profileName");
+    localStorage.removeItem("profileClass");
+    localStorage.removeItem("profileSchool");
+
+    document.getElementById("nameInput").value = "";
+    document.getElementById("classInput").value = "";
+    document.getElementById("schoolInput").value = "";
+
+    alert("🗑️ Profile Removed!");
+
+}
+
+</script>
+
 
 </body>
 
